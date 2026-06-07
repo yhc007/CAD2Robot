@@ -1,8 +1,15 @@
 # CAD2Robot
 
-Web-based UI/UX + Rust-native core (WASM + native/CLI/PyO3) for converting STEP CAD assemblies into simulation-ready URDF robot descriptions, with strong support for NVIDIA Isaac Sim / Omniverse, ROS, Gazebo, and RViz.
+**STEP CAD → Robot Description (URDF + meshes)** tool with a full client-side web UI and a shared Rust core (WASM + native CLI).
 
-**Status**: Design complete and approved. Ready for implementation.
+Current focus: Convert a STEP assembly into a ready-to-use URDF package containing:
+- Clean URDF with `<visual>` and `<collision>` meshes
+- Binary STL files (scaled to meters)
+- Separate (and optionally simplified) collision geometry
+
+Strong target: NVIDIA Isaac Sim / Omniverse, ROS 2, Gazebo, RViz.
+
+**Status**: MVP implemented (core + CLI + Web UI + collision simplification). See below for current capabilities.
 
 ## Quick Links
 
