@@ -1,0 +1,22 @@
+[package]
+name = "cad2robot"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "cad2robot"
+path = "src/main.rs"
+
+[dependencies]
+cad2robot-core = { path = "../core" }
+clap = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde_json = { workspace = true }
+
+[features]
+default = ["occt"]
+occt = ["cad2robot-core/occt"]

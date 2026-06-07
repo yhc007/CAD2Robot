@@ -1,0 +1,26 @@
+[package]
+name = "cad2robot-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# occt-wasm: primary recommended kernel (full OCCT fidelity + direct B-Rep queries for volume/CoM/inertia)
+occt-wasm = { version = "3", optional = true }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+nalgebra = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+
+[features]
+default = ["occt"]
+occt = ["dep:occt-wasm"]
+
+[lib]
+path = "src/lib.rs"

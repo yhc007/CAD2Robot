@@ -1,0 +1,98 @@
+.app {
+  font-family: system-ui, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  color: #ddd;
+}
+
+.topbar {
+  padding: 12px 20px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: #333;
+  border-radius: 4px;
+}
+
+.layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.panel {
+  width: 260px;
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+  padding: 16px;
+  overflow: auto;
+}
+
+.panel.right {
+  border-right: none;
+  border-left: 1px solid #333;
+}
+
+.viewport {
+  flex: 1;
+  position: relative;
+  background: #0a0a0a;
+}
+
+.overlay {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.hint {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.placeholder {
+  background: #222;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 12px 0;
+  font-size: 13px;
+  min-height: 80px;
+}
+
+.footer {
+  padding: 8px 20px;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.compat {
+  opacity: 0.6;
+}

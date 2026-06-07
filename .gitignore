@@ -1,0 +1,29 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock   # We will commit it (good for binaries/workspaces)
+
+# Web
+web/node_modules/
+web/dist/
+web/.vite/
+web/pkg/          # Built WASM - users should rebuild or we can commit small one; for cleanliness, ignore + document
+
+# Generated artifacts & user data
+*.stp
+*.step
+*.stl
+*.urdf
+*_description/
+Core\ Stacking.stp
+Core_Stacking.urdf
+Core_Stacking_description/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Large or sensitive

@@ -1,0 +1,23 @@
+[package]
+name = "cad2robot-wasm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+cad2robot-core = { path = "../core", default-features = false }
+wasm-bindgen = "0.2"
+serde = { workspace = true }
+serde_json = { workspace = true }
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+
+[features]
+default = []
+# Browser builds use stub kernel for now (real heavy OCCT tessellation in browser
+# is best done via the dedicated occt-wasm JS package or future port).
